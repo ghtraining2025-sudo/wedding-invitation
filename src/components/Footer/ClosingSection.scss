@@ -1,0 +1,138 @@
+@use '../../styles/abstracts/variables' as *;
+.closing-section {
+    padding: 80px 20px 30px;
+    background: $color-purple;
+}
+
+.closing-frame {
+    width: min(100%, 900px);
+    margin-inline: auto;
+    padding: 12px;
+    border: 1px solid rgba($color-gold-light, 0.8);
+    &::before {
+        content: '';
+        display: block;
+        height: 5px;
+        border: 1px solid rgba($color-gold-light, 0.4);
+    }
+}
+
+.closing-content {
+    border: 1px solid rgba($color-gold-light, 0.4);
+    padding: 65px 35px;
+    text-align: center;
+}
+
+.closing-ornament {
+    display: block;
+    color: $color-gold-light;
+    font-family: $font-heading;
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    &--bottom {
+        margin: 30px 0 0;
+        transform: rotate(180deg);
+    }
+}
+
+.closing-eyebrow {
+    color: $color-gold-light;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: $weight-bold;
+}
+
+.closing-content h2 {
+    color: #fff8e9;
+    font-family: $font-heading;
+    font-size: clamp(42px, 7vw, 62px);
+    font-style: italic;
+    font-weight: $weight-regular;
+    margin-top: 10px;
+}
+
+.closing-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: $color-gold-light;
+    margin: 25px 0;
+    span {
+        width: 55px;
+        height: 1px;
+        background: $color-gold-light;
+    }
+}
+
+.closing-message {
+    max-width: 570px;
+    margin-inline: auto;
+    color: rgba(255, 248, 233, 0.85);
+    font-family: $font-heading;
+    font-size: 23px;
+    line-height: 1.7;
+}
+
+.closing-couple {
+    color: $color-gold-light;
+    font-family: $font-heading;
+    font-size: clamp(28px, 5vw, 39px);
+    font-weight: $weight-semibold;
+    font-style: italic;
+    margin-top: 35px;
+}
+
+.closing-footer-message {
+    color: rgba(255, 248, 233, 0.8);
+    font-family: $font-heading;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.closing-signature {
+    color: $color-gold-light;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.closing-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding-top: 28px;
+    text-align: center;
+    p {
+        color: $color-gold-light;
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+    span {
+        color: rgba(255, 248, 233, 0.65);
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 575px) {
+    .closing-section {
+        padding: 55px 14px 25px;
+    }
+    .closing-content {
+        padding: 50px 18px;
+    }
+    .closing-message {
+        font-size: 19px;
+    }
+    .closing-footer-message {
+        font-size: 18px;
+    }
+    .closing-couple {
+        font-size: 29px;
+    }
+}

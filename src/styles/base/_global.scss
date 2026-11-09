@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+:root {
+    --color-ivory: #{$color-ivory};
+    --color-champagne: #{$color-champagne};
+    --color-gold: #{$color-gold};
+    --color-bronze: #{$color-bronze};
+    --color-brown: #{$color-brown};
+    --color-white: #{$color-white};
+    --color-text-primary: #{$color-text-primary};
+    --color-text-secondary: #{$color-text-secondary};
+    --color-text-muted: #{$color-text-muted};
+    --font-heading: #{$font-heading};
+    --font-body: #{$font-body};
+    --font-arabic: #{$font-arabic};
+    --container-width: #{$container-width};
+    --container-padding: #{$container-padding};
+    --color-purple: #{$color-purple};
+    --color-purple-light: #{$color-purple-light};
+    --color-deep-purple: #{$color-deep-purple};
+    --color-purple-soft: #{$color-purple-soft};
+    --color-gold-light: #{$color-gold-light};
+}
+
+body {
+    background-color: $color-ivory;
+    color: $color-text-primary;
+    font-family: $font-body;
+    font-weight: $weight-regular;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-heading;
+    font-weight: $weight-regular;
+    line-height: 1.2;
+}
+
+.arabic-text {
+    font-family: $font-arabic;
+    direction: rtl;
+    line-height: 1.8;
+}
+
+.container {
+    @include container;
+}
+
+.gold-divider {
+    @include gold-divider;
+}
+
+::selection {
+    background: $color-gold;
+    color: $color-white;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid $color-gold;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,35 @@
+@mixin mobile {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 576px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin container {
+    width: min( calc(100% - 2 * var(--container-padding)), var(--container-width));
+    margin-inline: auto;
+}
+
+@mixin gold-divider {
+    width: 70px;
+    height: 1px;
+    background: var(--color-gold);
+    margin-inline: auto;
+}

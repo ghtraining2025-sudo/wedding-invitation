@@ -1,0 +1,141 @@
+@use '../../styles/abstracts/variables' as *;
+.countdown-section {
+    padding: 90px 20px;
+    background: radial-gradient( ellipse at center, rgba(255, 255, 255, 0.9), transparent 75%), $color-ivory;
+}
+
+.countdown-frame {
+    width: min(100%, 900px);
+    margin-inline: auto;
+    padding: 12px;
+    border: 1px solid rgba($color-gold, 0.7);
+    background: #fffdf9;
+    box-shadow: $shadow-soft;
+    &::before {
+        content: '';
+        display: block;
+        height: 5px;
+        border: 1px solid rgba($color-gold, 0.3);
+    }
+}
+
+.countdown-content {
+    padding: 65px 25px;
+    text-align: center;
+}
+
+.countdown-eyebrow {
+    color: $color-gold;
+    font-size: 10px;
+    font-weight: $weight-bold;
+    letter-spacing: 4px;
+}
+
+.countdown-content h2 {
+    color: $color-purple;
+    font-family: $font-heading;
+    font-size: clamp(45px, 7vw, 65px);
+    font-style: italic;
+    font-weight: $weight-regular;
+    margin-top: 10px;
+}
+
+.countdown-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 22px 0 35px;
+    color: $color-gold;
+    span {
+        width: 55px;
+        height: 1px;
+        background: $color-gold;
+    }
+}
+
+.countdown-grid {
+    width: min(100%, 650px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.countdown-item {
+    padding: 22px 10px;
+    background: $color-purple-soft;
+    border: 1px solid rgba($color-gold, 0.35);
+    span {
+        display: block;
+        margin-top: 8px;
+        color: $color-text-secondary;
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+.countdown-number {
+    color: $color-purple;
+    font-family: $font-heading;
+    font-size: clamp(35px, 6vw, 55px);
+    font-weight: $weight-semibold;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.countdown-date {
+    color: $color-bronze;
+    font-family: $font-heading;
+    font-size: 25px;
+    font-weight: $weight-semibold;
+    margin-top: 35px;
+}
+
+.countdown-hijri {
+    color: $color-text-muted;
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.countdown-completed {
+    padding: 25px;
+    h3 {
+        color: $color-purple;
+        font-size: 36px;
+        font-style: italic;
+    }
+    p {
+        color: $color-text-secondary;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .countdown-section {
+        padding: 65px 15px;
+    }
+    .countdown-content {
+        padding: 50px 12px;
+    }
+    .countdown-grid {
+        gap: 7px;
+    }
+    .countdown-item {
+        padding: 18px 4px;
+        span {
+            font-size: 8px;
+            letter-spacing: 1px;
+        }
+    }
+    .countdown-number {
+        font-size: clamp(29px, 9vw, 40px);
+    }
+    .countdown-date {
+        font-size: 21px;
+    }
+    .countdown-hijri {
+        font-size: 18px;
+    }
+}

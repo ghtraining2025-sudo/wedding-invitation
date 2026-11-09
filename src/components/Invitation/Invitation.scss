@@ -1,0 +1,499 @@
+@use '../../styles/abstracts/variables' as *;
+.invitation-section {
+    --inv-purple: #4b0750;
+    --inv-deep-purple: #310c35;
+    --inv-gold: #b5965a;
+    --inv-gold-light: #e8d3a5;
+    --inv-ivory: #fbf8f2;
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 30px 65px;
+    overflow: hidden;
+    // background: radial-gradient( ellipse at 50% 35%, rgba(255, 255, 255, 0.95), transparent 65%), linear-gradient( 135deg, #fbf8f2, #f5eee5);
+    background: $color-purple;
+    color: #584334;
+}
+
+.text-light-gold {
+    color: var(--inv-gold-light);
+}
+
+.text-ivory {
+    color: var(--inv-ivory);
+}
+
+.invitation-section-glow {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: radial-gradient( circle at 8% 30%, rgba(75, 7, 80, 0.07), transparent 25%), radial-gradient( circle at 90% 75%, rgba(181, 150, 90, 0.13), transparent 30%);
+}
+
+.invitation-section-inner {
+    position: relative;
+    width: min(100%, 1250px);
+    margin: 0 auto;
+}
+
+.invitation-top-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.invitation-top-label span {
+    padding: 9px 22px;
+    border: 1px solid rgba(181, 150, 90, 0.5);
+    color: var(--inv-gold-light);
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+}
+
+.invitation-main-content {
+    position: relative;
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    padding: 65px clamp(20px, 5vw, 80px);
+    border: 1px solid rgba(181, 150, 90, 0.55);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 75px rgba(49, 12, 53, 0.045), inset 0 0 60px rgba(255, 255, 255, 0.5);
+}
+
+.invitation-main-content::before {
+    position: absolute;
+    content: '';
+    inset: 10px;
+    border: 1px solid rgba(181, 150, 90, 0.22);
+    pointer-events: none;
+}
+
+.invitation-bismillah {
+    position: relative;
+    margin: 0;
+    color: var(--inv-gold-light);
+    font-family: 'Amiri', serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.invitation-ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 22px auto;
+    color: var(--inv-gold);
+}
+
+.invitation-ornament-divider span {
+    width: 45px;
+    height: 1px;
+    background: linear-gradient( 90deg, transparent, var(--inv-gold));
+}
+
+.invitation-ornament-divider span:last-child {
+    transform: rotate(180deg);
+}
+
+.invitation-ornament-divider i {
+    font-size: 15px;
+    font-style: normal;
+}
+
+.invitation-overline {
+    margin: 0;
+    color: var(--inv-ivory);
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+
+.invitation-section-title {
+    margin: 12px 0;
+    color: var(--inv-gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.invitation-message {
+    max-width: 650px;
+    margin: 18px auto 0;
+    color: #705b4c;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+
+/* Guardians */
+
+.guardians-section {
+    margin: 35px auto 45px;
+    text-align: center;
+}
+
+.invitation-small-heading {
+    margin-bottom: 24px;
+    color: #9b805a;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+}
+
+.guardians-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.guardian-item {
+    padding: 22px 18px;
+    border: 1px solid rgba(181, 150, 90, 0.32);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+}
+
+.guardian-item h3 {
+    margin: 0 0 9px;
+    color: var(--inv-purple);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.guardian-item p {
+    margin: 4px 0;
+    color: #806b56;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* Couple profiles */
+
+.couple-section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 35px;
+    margin: 55px auto;
+    padding: 45px 25px;
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+    border-bottom: 1px solid rgba(181, 150, 90, 0.35);
+}
+
+.couple-profile {
+    text-align: center;
+}
+
+.couple-role {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #a28659;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+}
+
+.couple-profile h3 {
+    margin: 0 0 10px;
+    color: var(--inv-purple);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(31px, 4vw, 43px);
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.couple-qualification {
+    color: #98784e;
+    font-size: 12px;
+}
+
+.couple-family,
+.couple-detail {
+    margin: 9px 0 0;
+    color: #765f4b;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.couple-ampersand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--inv-gold);
+}
+
+.couple-ampersand span {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient( transparent, var(--inv-gold), transparent);
+}
+
+.couple-ampersand i {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+}
+
+
+/* Wedding date */
+
+.invitation-date-block {
+    position: relative;
+    text-align: center;
+}
+
+.invitation-nikah-label {
+    margin: 0;
+    color: #9b805a;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+}
+
+.invitation-date-block h3 {
+    margin: 7px 0 15px;
+    color: var(--inv-purple);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.invitation-day {
+    color: #806b56;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+}
+
+.invitation-date {
+    margin: 8px 0;
+    color: var(--inv-purple);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 39px);
+    font-weight: 600;
+}
+
+.invitation-hijri {
+    color: #9b805a;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.invitation-date-star {
+    margin-top: 22px;
+    color: var(--inv-gold);
+    font-size: 22px;
+}
+
+
+/* Decorative stars */
+
+.invitation-orbit-star {
+    position: absolute;
+    z-index: 1;
+    color: var(--inv-gold);
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.orbit-one {
+    top: 17%;
+    left: 7%;
+    font-size: 42px;
+}
+
+.orbit-two {
+    top: 48%;
+    right: 8%;
+    font-size: 32px;
+}
+
+.orbit-three {
+    right: 15%;
+    bottom: 12%;
+    font-size: 25px;
+}
+
+.invitation-bottom-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 38px;
+    color: var(--inv-gold);
+}
+
+.invitation-bottom-ornament span {
+    font-family: Georgia, serif;
+    font-size: 35px;
+}
+
+.invitation-bottom-ornament i {
+    font-family: 'Lato', sans-serif;
+    font-size: 9px;
+    font-style: normal;
+    letter-spacing: 0.3em;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .invitation-section {
+        min-height: auto;
+        padding: 65px 14px 45px;
+    }
+    .invitation-main-content {
+        padding: 45px 18px;
+    }
+    .guardians-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .couple-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 35px auto;
+        padding: 35px 10px;
+    }
+    .couple-ampersand {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .couple-ampersand span {
+        width: 40px;
+        height: 1px;
+    }
+    .orbit-one {
+        top: 6%;
+        left: 4%;
+        font-size: 27px;
+    }
+    .orbit-two {
+        top: 45%;
+        right: 3%;
+        font-size: 23px;
+    }
+    .orbit-three {
+        right: 8%;
+        bottom: 5%;
+        font-size: 20px;
+    }
+    .invitation-bottom-ornament {
+        gap: 12px;
+    }
+    .invitation-bottom-ornament i {
+        font-size: 8px;
+        letter-spacing: 0.2em;
+    }
+}
+
+
+/* =====================================
+   INVITATION TEXT CONTRAST FIX
+   Preserve existing backgrounds/design
+===================================== */
+
+.invitation-section-title,
+.invitation-bismillah,
+.guardian-item h3,
+.couple-profile h3,
+.invitation-date-block h3,
+.invitation-date {
+    color: var(--inv-gold-light);
+}
+
+
+/* Main invitation message */
+
+.invitation-message {
+    color: var(--inv-ivory);
+}
+
+
+/* Guardian information */
+
+.invitation-small-heading {
+    color: var(--inv-gold-light);
+    font-weight: 700;
+}
+
+.guardian-item p {
+    color: var(--inv-ivory);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* Groom and bride information */
+
+.couple-role {
+    color: var(--inv-gold-light);
+    font-weight: 700;
+}
+
+.couple-qualification {
+    color: var(--inv-ivory);
+    font-weight: 600;
+}
+
+.couple-family,
+.couple-detail {
+    color: var(--inv-ivory);
+    font-weight: 500;
+}
+
+
+/* Wedding date information */
+
+.invitation-nikah-label {
+    color: var(--inv-gold-light);
+    font-weight: 700;
+}
+
+.invitation-day {
+    color: var(--inv-ivory);
+}
+
+.invitation-hijri {
+    color: var(--inv-ivory);
+    font-weight: 600;
+}
+
+
+/* Decorative text */
+
+.invitation-overline {
+    color: var(--inv-ivory);
+    font-weight: 700;
+}
+
+.invitation-top-label span {
+    color: var(--inv-gold-light);
+    font-weight: 700;
+}
+
+.invitation-bottom-ornament i {
+    color: var(--inv-gold-light);
+    font-weight: 600;
+}

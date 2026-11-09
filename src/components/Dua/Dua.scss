@@ -1,0 +1,118 @@
+@use '../../styles/abstracts/variables' as *;
+.dua-section {
+    padding: 85px 20px;
+    background: radial-gradient( ellipse at center, rgba(255, 255, 255, 0.95), transparent 75%), $color-ivory;
+}
+
+.dua-card {
+    width: min(100%, 850px);
+    margin-inline: auto;
+    padding: 12px;
+    background: #fffdf9;
+    border: 1px solid rgba($color-gold, 0.65);
+    box-shadow: $shadow-soft;
+    &::before {
+        content: '';
+        display: block;
+        height: 5px;
+        border: 1px solid rgba($color-gold, 0.35);
+    }
+}
+
+.dua-border {
+    border: 1px solid rgba($color-purple, 0.2);
+    position: relative;
+}
+
+.dua-content {
+    position: relative;
+    padding: 65px 50px;
+    text-align: center;
+}
+
+.dua-ornament {
+    display: block;
+    color: $color-gold;
+    font-family: $font-heading;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 20px;
+    &--bottom {
+        margin: 30px 0 0;
+        transform: rotate(180deg);
+    }
+}
+
+.dua-eyebrow {
+    color: $color-gold;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: $weight-bold;
+}
+
+.dua-content h2 {
+    color: $color-purple;
+    font-family: $font-heading;
+    font-size: clamp(40px, 6vw, 55px);
+    font-style: italic;
+    font-weight: $weight-regular;
+    margin-top: 10px;
+}
+
+.dua-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 25px 0;
+    color: $color-gold;
+    span {
+        width: 55px;
+        height: 1px;
+        background: $color-gold;
+    }
+    &--small {
+        margin: 28px 0;
+    }
+}
+
+.dua-arabic {
+    max-width: 680px;
+    margin-inline: auto;
+    color: $color-purple;
+    font-size: clamp(29px, 5vw, 43px);
+    line-height: 2;
+}
+
+.dua-translation {
+    max-width: 570px;
+    margin-inline: auto;
+    color: $color-bronze;
+    font-family: $font-heading;
+    font-size: clamp(20px, 3vw, 27px);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.dua-reference {
+    margin-top: 18px;
+    color: $color-text-muted;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+    .dua-section {
+        padding: 60px 14px;
+    }
+    .dua-content {
+        padding: 50px 18px;
+    }
+    .dua-arabic {
+        font-size: 29px;
+    }
+    .dua-translation {
+        font-size: 20px;
+    }
+}

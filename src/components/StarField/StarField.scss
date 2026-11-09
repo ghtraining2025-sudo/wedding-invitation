@@ -1,0 +1,35 @@
+.star-field {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    overflow: hidden;
+    pointer-events: none;
+    contain: layout paint;
+}
+
+.ambient-star {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.35;
+    background: #d8bd82;
+    box-shadow: 0 0 5px rgba(216, 189, 130, 0.8), 0 0 12px rgba(181, 150, 90, 0.45);
+    will-change: transform, opacity;
+}
+
+.ambient-star-large {
+    background: #f2dfb5;
+    box-shadow: 0 0 7px rgba(242, 223, 181, 0.9), 0 0 18px rgba(181, 150, 90, 0.65), 0 0 28px rgba(75, 7, 80, 0.2);
+}
+
+@media (max-width: 600px) {
+    .star-field {
+        opacity: 0.75;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-star {
+        opacity: 0.45;
+    }
+}

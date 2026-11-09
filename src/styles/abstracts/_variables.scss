@@ -1,0 +1,58 @@
+// ========================================
+// WEDDING INVITATION - DESIGN TOKENS
+// ========================================
+// Colors
+$color-ivory: #f8f4ec;
+$color-champagne: #ede4d5;
+$color-gold: #b5965a;
+$color-bronze: #6d5638;
+$color-brown: #44382f;
+$color-white: #ffffff;
+$color-text-primary: #44382f;
+$color-text-secondary: #806d58;
+$color-text-muted: #a09280;
+// Additional wedding accent colors
+$color-purple: #4b0750;
+$color-purple-light: #6b286b;
+$color-deep-purple: #310c35;
+$color-purple-soft: #f3eaf2;
+$color-gold-light: #d8bd82;
+// Typography
+$font-heading: 'Cormorant Garamond',
+serif;
+$font-body: 'Lato',
+sans-serif;
+$font-arabic: 'Amiri',
+serif;
+// Font weights
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+// Layout
+$container-width: 1200px;
+$container-padding: 24px;
+// Borders
+$border-gold: 1px solid rgba($color-gold, 0.45);
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+// Shadows
+$shadow-soft: 0 8px 30px rgba(68, 56, 47, 0.08);
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.4s ease;
+$transition-slow: 0.8s ease;
+// Z-index
+$z-background: -1;
+$z-content: 1;
+$z-overlay: 10;
+$z-modal: 100;
